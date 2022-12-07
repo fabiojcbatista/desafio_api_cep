@@ -23,7 +23,6 @@ import org.junit.jupiter.api.BeforeAll;
                 .setBaseUri(BASE_URI)
                 .setContentType(ContentType.JSON)
                 .addHeader("Content-Type","application/json")
-                .addHeader("Accept","application/vnd.taskmanager.v2")
                 .build();
     }
 

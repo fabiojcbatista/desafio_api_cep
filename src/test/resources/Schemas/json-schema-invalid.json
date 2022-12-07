@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "cep",
+    "logradouro",
+    "complemento",
+    "bairro",
+    "localidade",
+    "uf",
+    "ibge",
+    "gia",
+    "ddd",
+    "siafi"
+  ],
+  "properties": {
+    "cep": {
+      "type": "int",
+      "default": "",
+      "title": "The cep Schema",
+      "examples": [
+        "94440-360"
+      ]
+    },
+    "logradouro": {
+      "type": "string",
+      "default": "",
+      "title": "The logradouro Schema",
+      "examples": [
+        "Rua Alvarez de Azevedo"
+      ]
+    },
+    "complemento": {
+      "type": "string",
+      "default": "",
+      "title": "The complemento Schema",
+      "examples": [
+        ""
+      ]
+    },
+    "bairro": {
+      "type": "string",
+      "default": "",
+      "title": "The bairro Schema",
+      "examples": [
+        "Querência"
+      ]
+    },
+    "localidade": {
+      "type": "string",
+      "default": "",
+      "title": "The localidade Schema",
+      "examples": [
+        "Viamão"
+      ]
+    },
+    "uf": {
+      "type": "string",
+      "default": "",
+      "title": "The uf Schema",
+      "examples": [
+        "RS"
+      ]
+    },
+    "ibge": {
+      "type": "string",
+      "default": "",
+      "title": "The ibge Schema",
+      "examples": [
+        "4323002"
+      ]
+    },
+    "gia": {
+      "type": "string",
+      "default": "",
+      "title": "The gia Schema",
+      "examples": [
+        ""
+      ]
+    },
+    "ddd": {
+      "type": "string",
+      "default": "",
+      "title": "The ddd Schema",
+      "examples": [
+        "51"
+      ]
+    },
+    "siafi": {
+      "type": "string",
+      "default": "",
+      "title": "The siafi Schema",
+      "examples": [
+        "8963"
+      ]
+    }
+  },
+  "examples": [{
+    "cep": "94440-360",
+    "logradouro": "Rua Alvarez de Azevedo",
+    "complemento": "",
+    "bairro": "Querência",
+    "localidade": "Viamão",
+    "uf": "RS",
+    "ibge": "4323002",
+    "gia": "",
+    "ddd": "51",
+    "siafi": "8963"
+  }]
+}
