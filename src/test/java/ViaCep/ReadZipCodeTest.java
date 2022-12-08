@@ -2,20 +2,28 @@ package ViaCep;
 
 import TestBases.TestBases;
 import Utilidades.FileOperation;
+import io.qameta.allure.Description;
+import io.qameta.allure.Link;
+import io.qameta.allure.Step;
+import io.qameta.allure.Story;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.hamcrest.Matchers.equalTo;
-
-
 import static io.restassured.RestAssured.given;
 
-public class ReadZipCode extends TestBases {
+public class ReadZipCodeTest extends TestBases {
     private static final String validZipCode = FileOperation.getProperties("Variables").getProperty("validZipCode");
     private static final String invalidZipCode = FileOperation.getProperties("Variables").getProperty("invalidZipCode");
 
+    @Description("Test valid Zip Code")
+    @DisplayName("Creating test for valid Zip Code")
+    @Step("Valid ZipCode: {validZipCode}.")
+    @Link("{BASE_URI}/{PATH_WS}/{validZipCode}/{PATH_FORMAT}")
+    @Story("Test get Zip Code")
     @Test
-    public void getValidZipCode(){
+    public void getValidZipCodeTest(){
         Response response = given()
                 .spec(requestSpec)
                 .basePath(PATH_WS)
@@ -32,10 +40,18 @@ public class ReadZipCode extends TestBases {
                 .extract().response();
 
         System.out.println(response.then().extract().path("cep").toString());
+
+
     }
 
+
+    @Description("Test invalid Zip Code")
+    @DisplayName("Creating test for invalid Zip Code")
+    @Step("Invalid ZipCode: {invalidZipCode}.")
+    @Link("{BASE_URI}/{PATH_WS}/{invalidZipCode}/{PATH_FORMAT}")
+    @Story("Test get Zip Code")
     @Test
-    public void getInvalidZipCode(){
+    public void getInvalidZipCodeTest(){
          given()
                 .spec(requestSpec)
                 .basePath(PATH_WS)
