@@ -1,0 +1,10 @@
+{
+  "name": "localhost",
+  "type": "localhost",
+  "url": "https://viacep.com.br",
+  "buildOrder": 1,
+  "buildName": "allure_report_deploy#1",
+  "buildUrl": "#",
+  "reportUrl": "#",
+  "reportName": "Relatório de demonstração Allure"
+}
