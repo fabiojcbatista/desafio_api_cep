@@ -14,8 +14,6 @@ import static io.restassured.RestAssured.given;
 public class ReadZipCodeTest extends TestBases {
     private static final String VALID_ZIPCODE = FileOperation.getProperties("Variables").getProperty("validZipCode");
     private static final String INVALID_ZIPCODE = FileOperation.getProperties("Variables").getProperty("invalidZipCode");
-    public static final String VALID_URI = BASE_URI+PATH_WS+"/" + VALID_ZIPCODE + PATH_FORMAT;
-    private  static final String INVALID_URI = BASE_URI+PATH_WS+"/" + INVALID_ZIPCODE + PATH_FORMAT;
 
     @Description("Test valid Zip Code")
     @DisplayName("Creating test for valid Zip Code")
