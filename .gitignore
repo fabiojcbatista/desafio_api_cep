@@ -64,5 +64,5 @@ buildNumber.properties
 #####Relatórios######
 allure-report/
 history/
-*result.json
+/*result.json
 Report/*
