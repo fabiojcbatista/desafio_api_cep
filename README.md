@@ -7,7 +7,7 @@
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/fabiojcbatista/desafio_api_cep?style=for-the-badge)
 
 >>Passo-a-passo:
-> - <img src="https://github.com/fabiojcbatista/desafio_api_cep/blob/main/src/main/java/resources/Utils/desafio.PNG" alt="Imagem do desafio" title="Imagem do desafio">
+> - <img src="https://github.com/fabiojcbatista/desafio_api_cep/blob/main/src/main/resources/Utils/desafio.png" alt="Imagem do desafio" title="Imagem do desafio">
 
 >>### Ajustes e melhorias
 > >
