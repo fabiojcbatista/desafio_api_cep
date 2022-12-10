@@ -1,4 +1,5 @@
 package TestBases;
+
 import Utilidades.Endpoints;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
@@ -7,26 +8,26 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.junit.jupiter.api.BeforeAll;
 
- public class TestBases extends Endpoints {
+public class TestBases extends Endpoints {
 
     protected static RequestSpecification requestSpec;
     protected static ResponseSpecification responseSpec;
 
     @BeforeAll
-    public static void setUp(){
+    public static void setUp() {
         buildRequest();
         buildResponse();
     }
 
-    private static void buildRequest(){
+    private static void buildRequest() {
         requestSpec = new RequestSpecBuilder()
                 .setBaseUri(BASE_URI)
                 .setContentType(ContentType.JSON)
-                .addHeader("Content-Type","application/json")
+                .addHeader("Content-Type", "application/json")
                 .build();
     }
 
-    private static void buildResponse(){
+    private static void buildResponse() {
         responseSpec = new ResponseSpecBuilder()
                 .expectContentType(ContentType.JSON)
                 .build();

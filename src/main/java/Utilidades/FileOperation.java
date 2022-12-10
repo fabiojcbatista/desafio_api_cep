@@ -1,4 +1,5 @@
 package Utilidades;
+
 import java.io.*;
 import java.util.Properties;
 
@@ -7,7 +8,7 @@ public class FileOperation {
             System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" +
                     File.separator + "resources" + File.separator + "Properties" + File.separator;
 
-    public static Properties getProperties(String fileName){
+    public static Properties getProperties(String fileName) {
         InputStream inputStream = null;
         Properties prop = new Properties();
 
@@ -22,13 +23,13 @@ public class FileOperation {
         return prop;
     }
 
-    public static void setProperties(String fileName , String propKey , String propValue){
+    public static void setProperties(String fileName, String propKey, String propValue) {
         Properties prop = getProperties(fileName);
-        try{
+        try {
             OutputStream outputStream = new FileOutputStream(DIR_PATH_PROPERTIES + fileName + ".properties");
             prop.setProperty(propKey, propValue);
-            prop.store(outputStream,null);
-        }catch (IOException e){
+            prop.store(outputStream, null);
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
